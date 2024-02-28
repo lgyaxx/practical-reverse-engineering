@@ -29,7 +29,7 @@ black_out:
     mov al, [ebp+0Ch]  ; copy second parameter (char) to al (byte)
     mov edi, edx       ; restore edi from backup (points at string again)
     rep stosb          ; write byte at eax (second function parameter) to
-                       ; memory at edi (first function parameter), for edi
+                       ; memory at edi (first function parameter), for ecx
                        ; times (length of string)
     mov eax, edx       ; set eax (return value) to address of (changed) string
     ; ------------ end code from book -----------
